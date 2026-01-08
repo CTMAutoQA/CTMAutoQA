@@ -3,34 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CTM AutoQA – Web Automation Practice Site</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>CTM AutoQA — Automation Practice Site</title>
+
+  <meta name="description" content="CTM AutoQA is a modern automation testing practice website for Selenium, Playwright, Cypress, and API testing." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CTM AutoQA — Automation Practice Site" />
+  <meta property="og:description" content="Practice automation testing on real web elements with clean UI." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html, body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      backdrop-filter: blur(8px);
+    }
+  </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="site-title">CTM AutoQA</h1>
-      <p class="site-tag">Automation Practice Platform for Selenium, Playwright & Web Automation</p>
-      <nav class="main-nav">
-        <a href="elements/textbox.html">Elements</a>
-        <a href="forms/practice-form.html">Forms</a>
-        <a href="alerts/alerts.html">Alerts & Frames</a>
-        <a href="widgets/datepicker.html">Widgets</a>
-        <a href="interactions/drag-drop.html">Interactions</a>
-      </nav>
+
+<body class="bg-slate-900 text-slate-100">
+
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <div>
+      <h1 class="text-xl font-bold">CTM AutoQA</h1>
+      <p class="text-xs text-slate-400">Automation Testing Practice</p>
     </div>
+    <a href="https://github.com/CTMAutoQA" target="_blank"
+       class="px-4 py-2 bg-slate-800 rounded text-sm hover:bg-slate-700">
+      GitHub
+    </a>
   </header>
-  <main class="container">
-    <section class="hero">
-      <h2>Practice real-world web automation scenarios</h2>
-      <p>CTM AutoQA provides a curated set of pages and components used commonly in interviews and automation exercises.</p>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <p>© CTM AutoQA | Automation Practice Platform</p>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-block mb-4 px-3 py-1 text-xs bg-teal-400/20 text-teal-300 rounded">
+        Selenium • Playwright • Cypress
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Automation Testing <br /> Practice Website
+      </h2>
+
+      <p class="mt-5 text-slate-300 max-w-xl">
+        CTM AutoQA is a free automation practice site inspired by DemoQA.
+        Use it to test locators, waits, alerts, frames, forms, and more.
+      </p>
+
+      <div class="mt-8 flex gap-4">
+        <a href="#modules"
+           class="px-6 py-3 bg-teal-400 text-slate-900 font-semibold rounded-md hover:opacity-90">
+          Start Practicing
+        </a>
+        <a href="#about"
+           class="px-6 py-3 border border-slate-700 rounded-md text-slate-300 hover:bg-slate-800">
+          Learn More
+        </a>
+      </div>
     </div>
+
+    <!-- Demo Card -->
+    <div class="glass border border-slate-800 rounded-xl p-6 shadow-lg">
+      <div class="text-sm text-slate-400 mb-3">Sample Test Modules</div>
+      <ul class="space-y-3 text-sm">
+        <li class="bg-slate-800 rounded p-3">✔ Text Box & Forms</li>
+        <li class="bg-slate-800 rounded p-3">✔ Checkboxes & Radio Buttons</li>
+        <li class="bg-slate-800 rounded p-3">✔ Alerts, Frames & Windows</li>
+        <li class="bg-slate-800 rounded p-3">✔ Dropdowns & Dynamic Elements</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Modules -->
+  <section id="modules" class="max-w-7xl mx-auto px-6 py-14">
+    <h3 class="text-2xl font-bold">Practice Modules</h3>
+    <p class="text-slate-400 mt-1">Use these pages for real automation scenarios.</p>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="textbox.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Text Box</h4>
+        <p class="text-sm text-slate-400 mt-2">Input fields & validations</p>
+      </a>
+
+      <a href="checkbox.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Check Box</h4>
+        <p class="text-sm text-slate-400 mt-2">Single & multiple selection</p>
+      </a>
+
+      <a href="radio.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Radio Button</h4>
+        <p class="text-sm text-slate-400 mt-2">Exclusive selections</p>
+      </a>
+
+      <a href="dropdown.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Dropdown</h4>
+        <p class="text-sm text-slate-400 mt-2">Static & dynamic dropdowns</p>
+      </a>
+
+      <a href="alerts.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Alerts</h4>
+        <p class="text-sm text-slate-400 mt-2">JS alerts & confirmations</p>
+      </a>
+
+      <a href="frames.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Frames</h4>
+        <p class="text-sm text-slate-400 mt-2">iFrames & nested frames</p>
+      </a>
+
+      <a href="windows.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Windows</h4>
+        <p class="text-sm text-slate-400 mt-2">Multiple tabs & windows</p>
+      </a>
+
+      <a href="tables.html" class="p-5 bg-slate-800 rounded-lg hover:bg-slate-700">
+        <h4 class="font-semibold">Web Tables</h4>
+        <p class="text-sm text-slate-400 mt-2">Dynamic table handling</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-slate-800/40 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <h3 class="text-2xl font-bold">Why CTM AutoQA?</h3>
+      <p class="mt-4 text-slate-300 max-w-3xl">
+        Built by an SDET for SDETs. This site is designed to simulate
+        real-world automation challenges for interview prep and framework practice.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-slate-500 text-sm py-6">
+    © 2026 CTM AutoQA • Built for Automation Testers • GitHub Pages
   </footer>
-  <script src="js/main.js"></script>
+
 </body>
 </html>
